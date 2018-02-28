@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
-public class Profile extends AppCompatActivity {
+public class UpdateProfile extends AppCompatActivity {
     EditText profileName;
     Button updateButton;
     String userName;
@@ -43,9 +43,9 @@ public class Profile extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()) {
-                            startActivity(new Intent( Profile.this, LoggedIn.class));
+                            startActivity(new Intent( UpdateProfile.this, TakePicture.class));
                         } else {
-                            startActivity(new Intent( Profile.this, MainActivity.class));
+                            startActivity(new Intent( UpdateProfile.this, MainActivity.class));
                         }
                     }
                 });

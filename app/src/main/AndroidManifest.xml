@@ -18,9 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoggedIn" />
-        <activity android:name=".Profile" />
-        <activity android:name=".SignUp"></activity>
+        <activity android:name=".TakePicture" />
+        <activity android:name=".UpdateProfile" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".ShowPictures"></activity>
     </application>
 
 </manifest>

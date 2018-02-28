@@ -9,13 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthProvider;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(myAuth.getCurrentUser() != null) {
                     if(myAuth.getCurrentUser().getDisplayName() == null ) {
-                        startActivity(new Intent(MainActivity.this, Profile.class));
+                        startActivity(new Intent(MainActivity.this, UpdateProfile.class));
                     } else {
-                        startActivity(new Intent(MainActivity.this, LoggedIn.class));
+                        startActivity(new Intent(MainActivity.this, TakePicture.class));
                     }
                 }
             }
